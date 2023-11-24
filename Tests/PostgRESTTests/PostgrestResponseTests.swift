@@ -1,5 +1,9 @@
 import XCTest
 
+#if os(Linux)
+import FoundationNetworking
+#endif
+
 @testable import PostgREST
 
 class PostgrestResponseTests: XCTestCase {

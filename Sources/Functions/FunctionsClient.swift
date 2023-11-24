@@ -1,4 +1,9 @@
 import Foundation
+
+#if os(Linux)
+import FoundationNetworking
+#endif
+
 @_spi(Internal) import _Helpers
 
 let version = _Helpers.version

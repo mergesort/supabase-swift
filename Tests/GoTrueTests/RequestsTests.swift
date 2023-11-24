@@ -9,6 +9,10 @@ import SnapshotTesting
 import XCTest
 @_spi(Internal) import _Helpers
 
+#if os(Linux)
+import FoundationNetworking
+#endif
+
 @testable import GoTrue
 
 struct UnimplementedError: Error {}

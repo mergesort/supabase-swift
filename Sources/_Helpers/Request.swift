@@ -1,5 +1,9 @@
 import Foundation
 
+#if os(Linux)
+import FoundationNetworking
+#endif
+
 @_spi(Internal)
 public struct HTTPClient: Sendable {
   public typealias FetchHandler = @Sendable (URLRequest) async throws -> (Data, URLResponse)
